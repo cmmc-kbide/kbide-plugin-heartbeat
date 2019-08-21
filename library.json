@@ -1,0 +1,17 @@
+{
+  "name" : "kbide-plugin-heartbeat",
+  "title": "heartbeat",
+  "keywords": "heartbeat, esp32, esp8266, arduino",
+  "description": "heartbeat plugin for KB-IDE",
+  "category":"",
+  "git": "https://github.com/cmmc-kbide/kbide-plugin-heartbeat/",
+  "author": "cmmakerclub",
+  "email": "",
+  "url": "https://github.com/cmmc-kbide/kbide-plugin-heartbeat/",
+  "version": "1.0.0",
+  "board" : "",
+  "platform": ["arduino-esp32"],
+  "license": "",
+  "image" : "/static/display.png",
+  "homepage": "http://www.kbide.org"
+}
