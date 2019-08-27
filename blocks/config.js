@@ -1,6 +1,6 @@
 module.exports = [
     {
-        name: "photo_resistor_block",
+        name: "KY-039 Detect the heartbeat module",
         blocks: [
             {
               xml: `<block type="hearbeat_block">
