@@ -8,7 +8,7 @@
   "author": "Prawared",
   "email": "",
   "url": "https://github.com/cmmc-kbide/kbide-plugin-heartbeat/",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "board" : "",
   "platform": ["arduino-esp32"],
   "license": "",
