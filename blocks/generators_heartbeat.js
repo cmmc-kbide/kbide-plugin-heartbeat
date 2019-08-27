@@ -1,5 +1,4 @@
-module.exports = function(Blockly) {
-  Blockly.JavaScript["hearbeat_block"] = function(block) {
+Blockly.JavaScript["hearbeat_block"] = function(block) {
     var value_hearbeat_pin = Blockly.JavaScript.valueToCode(
       block,
       "HEARBEAT_PIN",
@@ -30,20 +29,19 @@ module.exports = function(Blockly) {
     );
     // TODO: Assemble JavaScript into code variable.
     var code = `
-	#VARIABLE
-		int HEARBEAT_PIN = ${value_hearbeat_pin};
-		double HEARBEAT_ALPHA = ${value_hearbeat_alpha};
-		int HEARBEAT_PERIOD = ${value_hearbeat_period};
-		double HEARBEAT_CHANGE = ${value_hearbeat_change};
-	#END
+  #VARIABLE
+    int HEARBEAT_PIN = ${value_hearbeat_pin};
+    double HEARBEAT_ALPHA = ${value_hearbeat_alpha};
+    int HEARBEAT_PERIOD = ${value_hearbeat_period};
+    double HEARBEAT_CHANGE = ${value_hearbeat_change};
+  #END
 
-	static double HEARBEAT_OLD_VALUE = 0;
-	static double HEARBEAT_OLD_CHANGE = 0;
-	HEARBEAT_RAW_VALUE = analogRead(HEARBEAT_PIN);
-	HEARBEAT_VALUE = HEARBEAT_ALPHA * HEARBEAT_OLD_VALUE + (1 - HEARBEAT_ALPHA) * HEARBEAT_RAW_VALUE;
-	HEARBEAT_OLD_VALUE = HEARBEAT_VALUE;
-	delay(HEARBEAT_PERIOD);
+  static double HEARBEAT_OLD_VALUE = 0;
+  static double HEARBEAT_OLD_CHANGE = 0;
+  HEARBEAT_RAW_VALUE = analogRead(HEARBEAT_PIN);
+  HEARBEAT_VALUE = HEARBEAT_ALPHA * HEARBEAT_OLD_VALUE + (1 - HEARBEAT_ALPHA) * HEARBEAT_RAW_VALUE;
+  HEARBEAT_OLD_VALUE = HEARBEAT_VALUE;
+  delay(HEARBEAT_PERIOD);
     `;
     return code;
   };
-};
